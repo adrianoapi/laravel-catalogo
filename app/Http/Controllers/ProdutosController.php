@@ -4,13 +4,25 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Produto;
 
 class ProdutosController extends Controller
 {
 
     public function index()
     {
-        return "produtos";
+        $produtos = Produto::all();
+        echo "<pre>";
+        print_r($produtos);
+        echo "</pre>";
+    }
+
+    public function show($id)
+    {
+        $produtos = Produto::find($id);
+        echo "<pre>";
+        print_r($produtos);
+        echo "</pre>";
     }
 
 }
