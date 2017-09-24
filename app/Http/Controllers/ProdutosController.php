@@ -17,10 +17,8 @@ class ProdutosController extends Controller
 
     public function show($id)
     {
-        $produtos = Produto::find($id);
-        echo "<pre>";
-        print_r($produtos);
-        echo "</pre>";
+        $produto = Produto::find($id);
+        return view('produto.show',array('produto' => $produto));
     }
 
 }
