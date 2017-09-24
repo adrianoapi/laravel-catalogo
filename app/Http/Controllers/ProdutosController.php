@@ -12,9 +12,7 @@ class ProdutosController extends Controller
     public function index()
     {
         $produtos = Produto::all();
-        echo "<pre>";
-        print_r($produtos);
-        echo "</pre>";
+        return view('produto.index', array('produtos' => $produtos));
     }
 
     public function show($id)
