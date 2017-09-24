@@ -1,8 +1,6 @@
-<html>
-    <head>
-        <title>Produto {{$produto->titulo}}</title>
-    </head>
-    <body>
+@extends('layout.app')
+@section('title', $produto->titulo)
+@section('content')
         <h1>Produto {{$produto->titulo}}</h1>
         <ul>
             <li>Referência: {{$produto->referencia}}</li>
@@ -12,4 +10,4 @@
         <p>{{$produto->descricao}}</p>
         <a href="javacript:history.go(-1)">Voltar</a>
     </body>
-</html>
+@endsection
