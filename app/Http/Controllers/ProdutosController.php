@@ -18,7 +18,12 @@ class ProdutosController extends Controller
     public function show($id)
     {
         $produto = Produto::find($id);
-        return view('produto.show',array('produto' => $produto));
+        return view('produto.show', array('produto' => $produto));
+    }
+
+    public function create()
+    {
+        return view('produto.create');
     }
 
 }
